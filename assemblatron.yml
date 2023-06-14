@@ -1,7 +1,7 @@
 channels:
-  - default
-  - bioconda
   - conda-forge
+  - bioconda
+  - defaults
 dependencies:
   - snakemake-minimal==5.31.1
   - bbmap==38.58

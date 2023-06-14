@@ -101,15 +101,17 @@ fi
 
 CUSTOM_INSTALL_PATH=$(find $SCRIPT_DIR -name "custom_install.sh")
 #check if env $ENV_NAME already exists
-if $(conda env list | grep -q "$ENV_NAME")
+if ! (conda env list | grep "$ENV_NAME")
 then
+  echo "Environment is not found and will be created"
+else
   echo "Environment $ENV_NAME already exists"
   echo -e "\nIf you want to update it, please remove it first"
   echo "conda env remove --name $ENV_NAME"
   if test -f "$CUSTOM_INSTALL_PATH"
   then
     echo -e "\nIf you want to run the custom install part, you can execute:"
-    echo "bash $CUSTOM_INSTALL_PATH -i $parameterI"
+    echo "bash -i $CUSTOM_INSTALL_PATH $ENV_NAME"
   fi
   exit 1
 fi
@@ -125,7 +127,7 @@ else
   exit 1
 fi
 
-if $(conda env list | grep -q "$ENV_NAME")
+if ! (conda env list | grep "$ENV_NAME")
 then
   if [ "$parameterI" == "COMP" ]
   then
@@ -135,16 +137,16 @@ then
     conda config --remove envs_dirs $BIFROST_CONDA_PATH/envs
     conda config --remove pkgs_dirs $BIFROST_CONDA_PATH/pkgs
   fi
-  echo "Environment $ENV_NAME was created"
-else
   echo "Environment $ENV_NAME was not created"
   echo "Inspect conda error messages"
   exit 1
+else
+  echo "Environment $ENV_NAME was created"
 fi
 
 #check if custom_install.sh file exists and run it
 if test -f "$CUSTOM_INSTALL_PATH";
 then
   echo -e "\nRunning custom_install.sh"
-  bash $CUSTOM_INSTALL_PATH -i $parameterI
+  bash -i $CUSTOM_INSTALL_PATH $ENV_NAME #-i required for interactive mode to active env
 fi

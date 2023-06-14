@@ -1,11 +1,12 @@
 channels:
-  - default
-  - bioconda
   - conda-forge
+  - bioconda
+  - defaults
 dependencies:
   - snakemake-minimal==5.7.1
-  - kraken==1.1.1 ß
+  - kraken==1.1.1
   - bracken==1.0.0
+  - tar
   - pip
   - pip:
     #- jsonschema<4
