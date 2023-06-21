@@ -1,13 +1,17 @@
+#!/bin/bash
 #Script executes these command with some safeguards in place in case it fails:
 #git clone https://git@bitbucket.org/genomicepidemiology/mlst_db.git
 #cd mlst_db
 #git checkout 5e385d4
 #python3 INSTALL.py kma_index
+
 ENV_NAME=$1
-conda activate $ENV_NAME
 
 GIT_REPO_PATH=https://git@bitbucket.org/genomicepidemiology/mlst_db.git
 GIT_CHECKOUT_HASH=5e385d4 # Updated on 25/05/22
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd $SCRIPT_DIR # avoiding small edge case where bashrc sourcing changes your directory
 
 function exit_function() {
   echo "to rerun use the command:"
@@ -15,7 +19,14 @@ function exit_function() {
   exit 1
 }
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+if ! (conda env list | grep "$ENV_NAME")
+then
+  echo "conda environment specified is not found"
+  exit_function
+else
+  conda activate $ENV_NAME
+fi
+
 RESOURCES="$SCRIPT_DIR/resources"
 if test -d "$RESOURCES/mlst_db"
 then

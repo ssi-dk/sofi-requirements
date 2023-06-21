@@ -1,3 +1,4 @@
+#!/bin/bash
 #Script executes these command with some safeguards in place in case it fails:
 #mkdir minikraken && cd minikraken
 #wget -q https://ccb.jhu.edu/software/kraken/dl/minikraken_20171019_8GB.tgz
@@ -5,12 +6,15 @@
 #rm minikraken_20171019_8GB.tgz
 #wget -O minikraken_100mers_distrib.txt -q https://ccb.jhu.edu/software/bracken/dl/minikraken_8GB_100mers_distrib.txt
 #chmod +r minikraken_100mers_distrib.txt
+
 ENV_NAME=$1
-#conda activate $ENV_NAME
 
 MINIKRAKEN_DB_LINK=https://ccb.jhu.edu/software/kraken/dl/minikraken_20171019_8GB.tgz
 MINIKRAKEN_BRACKEN_LINK=https://ccb.jhu.edu/software/bracken/dl/minikraken_8GB_100mers_distrib.txt
 MINIKRAKEN_BRACKEN_FILE=minikraken_100mers_distrib.txt
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd $SCRIPT_DIR # avoiding small edge case where bashrc sourcing changes your directory
 
 function exit_function() {
   echo "to rerun use the command:"
@@ -18,7 +22,14 @@ function exit_function() {
   exit 1
 }
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+#if ! (conda env list | grep "$ENV_NAME")
+#then
+#  echo "conda environment specified is not found"
+#  exit_function
+#else
+#  conda activate $ENV_NAME
+#fi
+
 RESOURCES="$SCRIPT_DIR/resources"
 if test -d "$RESOURCES/minikraken"
 then
