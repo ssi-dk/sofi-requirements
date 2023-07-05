@@ -19,6 +19,9 @@ function exit_function() {
   exit 1
 }
 
+CONDA_BASE=$(conda info --base)
+source $CONDA_BASE/etc/profile.d/conda.sh
+
 if ! (conda env list | grep "$ENV_NAME")
 then
   echo "conda environment specified is not found"
