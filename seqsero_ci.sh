@@ -72,7 +72,7 @@ then
   then
     echo "Making conda env"
     echo "$SEQSERO_ENV_NAME will be created"
-    conda env create --file "$SEQSERO_ENV_FILE" --name $SEQSERO_ENV_NAME
+    mamba env create --file "$SEQSERO_ENV_FILE" --name $SEQSERO_ENV_NAME
   else
     echo "SeqSero.yml file cannot be found in the envs/ folder"
     exit_function
