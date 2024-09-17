@@ -32,6 +32,8 @@ then
   helpFunction
 fi
 
+STAGE="${BIFROST_STAGE:+${BIFROST_STAGE}_}"
+
 if [ "$parameterI" == "LOCAL" ]
 then
   echo "Starting local install"
@@ -95,7 +97,7 @@ then
       echo "code: in config.yaml should contain component version"
       exit 1
   fi
-  ENV_NAME=("bifrost_"$COMPONENT_NAME"_"$COMPONENT_VERSION)
+  ENV_NAME=("bifrost_"${STAGE}$COMPONENT_NAME"_"$COMPONENT_VERSION)
 else
   echo "Cannot find config.yaml in component folder to form env name"
   exit 1

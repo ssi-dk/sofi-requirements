@@ -6,6 +6,7 @@ checkout () {
   component=$1
   branch=${2:-main}
   pushd ../components
+  echo "Getting repo for bifrost_$component"
   if [ ! -e bifrost_$component ]
   then
     git clone git@github.com:ssi-dk/bifrost_$component.git
