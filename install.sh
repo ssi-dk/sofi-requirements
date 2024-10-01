@@ -81,6 +81,7 @@ fi
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 REQ_TXT="$SCRIPT_DIR/environment.yml"
+EXPL_TXT="$SCRIPT_DIR/explicit.txt"
 
 CONFIG_YAML_PATH=$(find $SCRIPT_DIR -name "config.yaml")
 if test -f "$CONFIG_YAML_PATH";
@@ -120,8 +121,13 @@ else
   exit 1
 fi
 
-#check if environment.yml file exists
-if test -f "$REQ_TXT";
+#check if explicit environment is defined
+if test -f "$EXPL_TXT"; then
+  echo "Making conda env"
+  echo "$ENV_NAME will be created"
+  mamba create --file "$EXPL_TXT" --name $ENV_NAME
+# else solve the environment from environment.yml if the file exists
+elif test -f "$REQ_TXT";
 then
   echo "Making conda env"
   echo "$ENV_NAME will be created"

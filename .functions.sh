@@ -19,15 +19,13 @@ checkout () {
 copy_custom_content () {
   component=$1
   component_dir=../components/bifrost_$component
-  if [ -e ${component}.frozen.yml ]; then
-    cp ${component}.frozen.yml $component_dir/environment.yml;
-  else
-    cp ${component}.yml $component_dir/environment.yml
+  if [ -e ${component}.frozen.txt ]; then
+    cp ${component}.frozen.yml $component_dir/explicit.txt;
   fi
+  cp ${component}.yml $component_dir/environment.yml
   cp install.sh $component_dir/
-  if [ -e ${component}_ci.sh ]
-  then
-     cp ${component}_ci.sh $component_dir/custom_install.sh
+  if [ -e ${component}_ci.sh ]; then
+    cp ${component}_ci.sh $component_dir/custom_install.sh
   fi
 }
 
@@ -84,6 +82,18 @@ freeze_component () {
   get_component_name name
   component_name=("bifrost_"$name)
   popd
-  conda list --export > ${name}.frozen.yml
+  conda list --explicit > ${name}.frozen.txt
   conda deactivate  
 }  
+
+remove_environment () {
+  component=$1
+  component_dir=../components/bifrost_$component
+  pushd $component_dir > /dev/null
+  get_environment_name env_name
+  popd > /dev/null
+  if conda info --envs | grep -q $env_name; then
+    echo mamba env remove -n $env_name
+    mamba env remove -n $env_name
+  fi
+}
