@@ -1,163 +1,167 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: linux-64
-_libgcc_mutex=0.1=conda_forge
-_openmp_mutex=4.5=2_gnu
-amply=0.1.6=pyhd8ed1ab_0
-appdirs=1.4.4=pyh9f0ad1d_0
-argh=0.27.2=pypi_0
-attrs=22.2.0=pyh71513ae_0
-bifrost-cge-mlst=2.2.10=dev_0
-bifrostlib=2.1.16=pypi_0
-biopython=1.79=py36h8f6f2f9_0
-blast=2.16.0=hc155240_2
-brotlipy=0.7.0=py36h8f6f2f9_1001
-bzip2=1.0.8=h4bc722e_7
-c-ares=1.32.3=h4bc722e_0
-ca-certificates=2024.8.30=hbcca054_0
-certifi=2021.5.30=py36h5fab9bb_0
-cffi=1.14.6=py36hd8eec40_1
-cgecore=1.5.5=pyh864c0ab_1
-charset-normalizer=2.1.1=pyhd8ed1ab_0
-coin-or-cbc=2.10.12=h8b142ea_1
-coin-or-cgl=0.60.7=h516709c_0
-coin-or-clp=1.17.8=h1ee7a9c_0
-coin-or-osi=0.108.10=haf5fa05_0
-coin-or-utils=2.11.11=hee58242_0
-coincbc=2.10.12=1_metapackage
-configargparse=1.7=pyhd8ed1ab_0
-coverage=6.2=pypi_0
-cryptography=35.0.0=py36hb60f036_0
-curl=7.87.0=h6312ad2_0
-datrie=0.8.2=py36h8f6f2f9_2
-decorator=5.1.1=pyhd8ed1ab_0
-dnspython=2.2.1=pypi_0
-docutils=0.17.1=py36h5fab9bb_0
-entrez-direct=22.4=he881be0_0
-expat=2.6.3=h5888daf_0
-gettext=0.22.5=he02047a_3
-gettext-tools=0.22.5=he02047a_3
-git=2.39.1=pl5321ha3eba64_0
-gitdb=4.0.10=pyhd8ed1ab_0
-gitpython=3.1.18=pyhd8ed1ab_0
-gprof2dot=2022.7.29=pypi_0
-idna=3.10=pyhd8ed1ab_0
-importlib-metadata=4.8.1=py36h5fab9bb_0
-iniconfig=1.1.1=pypi_0
-ipython_genutils=0.2.0=pyhd8ed1ab_1
-jsmin=3.0.1=pypi_0
-jsonpatch=1.32=pypi_0
-jsonpointer=2.3=pypi_0
-jsonschema=3.2.0=pypi_0
-jupyter_core=4.8.1=py36h5fab9bb_0
-keyutils=1.6.1=h166bdaf_0
-kma=1.4.9=he4a0461_2
-krb5=1.20.1=hf9c8cef_0
-ld_impl_linux-64=2.40=hf3520f5_7
-libasprintf=0.22.5=he8f35ee_3
-libasprintf-devel=0.22.5=he8f35ee_3
-libblas=3.9.0=23_linux64_openblas
-libcblas=3.9.0=23_linux64_openblas
-libcurl=7.87.0=h6312ad2_0
-libedit=3.1.20191231=he28a2e2_2
-libev=4.33=hd590300_2
-libexpat=2.6.3=h5888daf_0
-libffi=3.4.2=h7f98852_5
-libgcc=14.1.0=h77fa898_1
-libgcc-ng=14.1.0=h69a702a_1
-libgettextpo=0.22.5=he02047a_3
-libgettextpo-devel=0.22.5=he02047a_3
-libgfortran=14.1.0=h69a702a_1
-libgfortran-ng=14.1.0=h69a702a_1
-libgfortran5=14.1.0=hc5f4f2c_1
-libgomp=14.1.0=h77fa898_1
-libiconv=1.17=hd590300_2
-libidn2=2.3.7=hd590300_0
-liblapack=3.9.0=23_linux64_openblas
-liblapacke=3.9.0=23_linux64_openblas
-libmagic=1.0=pypi_0
-libnghttp2=1.51.0=hdcd2b5c_0
-libnsl=2.0.1=hd590300_0
-libopenblas=0.3.27=pthreads_hac2b453_1
-libsqlite=3.46.0=hde9e2c9_0
-libssh2=1.10.0=haa6b8db_3
-libstdcxx=14.1.0=hc0a3c3a_1
-libstdcxx-ng=14.1.0=h4852527_1
-libunistring=0.9.10=h7f98852_0
-libxcrypt=4.4.36=hd590300_1
-libzlib=1.2.13=h4ab18f5_6
-mlst-cge=2.0.9=hdfd78af_0
-nbformat=5.1.3=pyhd8ed1ab_0
-ncbi-vdb=3.1.1=h4ac6f70_2
-ncurses=6.5=he02047a_1
-numpy=1.19.5=py36hfc0c790_2
-openssl=1.1.1w=hd590300_0
-packaging=21.3=pypi_0
-pandas=1.1.5=pypi_0
-pcre2=10.40=hc3806b6_0
-perl=5.32.1=7_hd590300_perl5
-perl-archive-tar=2.40=pl5321hdfd78af_0
-perl-carp=1.50=pl5321hd8ed1ab_0
-perl-common-sense=3.75=pl5321hd8ed1ab_0
-perl-compress-raw-bzip2=2.201=pl5321h166bdaf_0
-perl-compress-raw-zlib=2.202=pl5321h166bdaf_0
-perl-encode=3.21=pl5321hd590300_0
-perl-exporter=5.74=pl5321hd8ed1ab_0
-perl-exporter-tiny=1.002002=pl5321hd8ed1ab_0
-perl-extutils-makemaker=7.70=pl5321hd8ed1ab_0
-perl-io-compress=2.201=pl5321hdbdd923_2
-perl-io-zlib=1.14=pl5321hdfd78af_0
-perl-json=4.10=pl5321hdfd78af_1
-perl-json-xs=4.03=pl5321h4ac6f70_3
-perl-list-moreutils=0.430=pl5321hdfd78af_0
-perl-list-moreutils-xs=0.430=pl5321h031d066_2
-perl-parent=0.241=pl5321hd8ed1ab_0
-perl-pathtools=3.75=pl5321h166bdaf_0
-perl-scalar-list-utils=1.63=pl5321h166bdaf_0
-perl-storable=3.15=pl5321hb9d3cd8_0
-perl-types-serialiser=1.01=pl5321hdfd78af_0
-pip=21.3.1=pyhd8ed1ab_0
-pluggy=1.0.0=pypi_0
-psutil=5.8.0=py36h8f6f2f9_1
-pulp=2.5.1=py36h5fab9bb_0
-py=1.11.0=pypi_0
-pycparser=2.21=pyhd8ed1ab_0
-pymongo=4.1.1=pypi_0
-pyopenssl=22.0.0=pyhd8ed1ab_1
-pyparsing=3.1.4=pyhd8ed1ab_0
-pyrsistent=0.17.3=py36h8f6f2f9_2
-pysocks=1.7.1=py36h5fab9bb_3
-pytest=7.0.1=pypi_0
-pytest-cov=4.0.0=pypi_0
-pytest-profiling=1.7.0=pypi_0
-python=3.6.15=hb7a2778_0_cpython
-python-dateutil=2.9.0.post0=pypi_0
-python-magic=0.4.27=pypi_0
-python_abi=3.6=2_cp36m
-pytz=2024.2=pypi_0
-pyyaml=6.0.1=pypi_0
-ratelimiter=1.2.0=pyhd8ed1ab_1003
-readline=8.2=h8228510_1
-requests=2.28.1=pyhd8ed1ab_0
-rpsbproc=0.5.0=h6a68c12_0
-setuptools=58.0.4=py36h5fab9bb_2
-six=1.16.0=pyh6c4a22f_0
-smmap=3.0.5=pyh44b312d_0
-snakemake-minimal=5.31.1=py_1
-sqlite=3.46.0=h6d4b2fc_0
-tabulate=0.7.7=py36_0
-tk=8.6.13=noxft_h4845f30_101
-tomli=1.2.3=pypi_0
-toposort=1.7=pyhd8ed1ab_0
-traitlets=4.3.3=pyhd8ed1ab_2
-typing_extensions=4.1.1=pyha770c72_0
-urllib3=1.26.15=pyhd8ed1ab_0
-warlock=1.3.3=pypi_0
-watchdog=2.3.1=pypi_0
-wget=1.20.3=ha56f1ee_1
-wheel=0.37.1=pyhd8ed1ab_0
-wrapt=1.13.1=py36h8f6f2f9_0
-xz=5.2.6=h166bdaf_0
-yaml=0.2.5=h7f98852_2
-zipp=3.6.0=pyhd8ed1ab_0
-zlib=1.2.13=h4ab18f5_6
+name: bifrost_dev_cge_mlst_v2.2.10
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - amply=0.1.6=pyhd8ed1ab_0
+  - appdirs=1.4.4=pyh9f0ad1d_0
+  - attrs=22.2.0=pyh71513ae_0
+  - biopython=1.79=py36h8f6f2f9_0
+  - blast=2.16.0=hc155240_2
+  - brotlipy=0.7.0=py36h8f6f2f9_1001
+  - bzip2=1.0.8=h4bc722e_7
+  - c-ares=1.32.3=h4bc722e_0
+  - ca-certificates=2024.8.30=hbcca054_0
+  - certifi=2021.5.30=py36h5fab9bb_0
+  - cffi=1.14.6=py36hd8eec40_1
+  - cgecore=1.5.5=pyh864c0ab_1
+  - charset-normalizer=2.1.1=pyhd8ed1ab_0
+  - coin-or-cbc=2.10.12=h8b142ea_1
+  - coin-or-cgl=0.60.7=h516709c_0
+  - coin-or-clp=1.17.8=h1ee7a9c_0
+  - coin-or-osi=0.108.10=haf5fa05_0
+  - coin-or-utils=2.11.11=hee58242_0
+  - coincbc=2.10.12=1_metapackage
+  - configargparse=1.7=pyhd8ed1ab_0
+  - cryptography=35.0.0=py36hb60f036_0
+  - curl=7.87.0=h6312ad2_0
+  - datrie=0.8.2=py36h8f6f2f9_2
+  - decorator=5.1.1=pyhd8ed1ab_0
+  - docutils=0.17.1=py36h5fab9bb_0
+  - entrez-direct=22.4=he881be0_0
+  - expat=2.6.3=h5888daf_0
+  - gettext=0.22.5=he02047a_3
+  - gettext-tools=0.22.5=he02047a_3
+  - git=2.39.1=pl5321ha3eba64_0
+  - gitdb=4.0.10=pyhd8ed1ab_0
+  - gitpython=3.1.18=pyhd8ed1ab_0
+  - idna=3.10=pyhd8ed1ab_0
+  - importlib-metadata=4.8.1=py36h5fab9bb_0
+  - ipython_genutils=0.2.0=pyhd8ed1ab_1
+  - jupyter_core=4.8.1=py36h5fab9bb_0
+  - keyutils=1.6.1=h166bdaf_0
+  - kma=1.4.9=he4a0461_2
+  - krb5=1.20.1=hf9c8cef_0
+  - ld_impl_linux-64=2.40=hf3520f5_7
+  - libasprintf=0.22.5=he8f35ee_3
+  - libasprintf-devel=0.22.5=he8f35ee_3
+  - libblas=3.9.0=23_linux64_openblas
+  - libcblas=3.9.0=23_linux64_openblas
+  - libcurl=7.87.0=h6312ad2_0
+  - libedit=3.1.20191231=he28a2e2_2
+  - libev=4.33=hd590300_2
+  - libexpat=2.6.3=h5888daf_0
+  - libffi=3.4.2=h7f98852_5
+  - libgcc=14.1.0=h77fa898_1
+  - libgcc-ng=14.1.0=h69a702a_1
+  - libgettextpo=0.22.5=he02047a_3
+  - libgettextpo-devel=0.22.5=he02047a_3
+  - libgfortran=14.1.0=h69a702a_1
+  - libgfortran-ng=14.1.0=h69a702a_1
+  - libgfortran5=14.1.0=hc5f4f2c_1
+  - libgomp=14.1.0=h77fa898_1
+  - libiconv=1.17=hd590300_2
+  - libidn2=2.3.7=hd590300_0
+  - liblapack=3.9.0=23_linux64_openblas
+  - liblapacke=3.9.0=23_linux64_openblas
+  - libnghttp2=1.51.0=hdcd2b5c_0
+  - libnsl=2.0.1=hd590300_0
+  - libopenblas=0.3.27=pthreads_hac2b453_1
+  - libsqlite=3.46.0=hde9e2c9_0
+  - libssh2=1.10.0=haa6b8db_3
+  - libstdcxx=14.1.0=hc0a3c3a_1
+  - libstdcxx-ng=14.1.0=h4852527_1
+  - libunistring=0.9.10=h7f98852_0
+  - libxcrypt=4.4.36=hd590300_1
+  - libzlib=1.2.13=h4ab18f5_6
+  - mlst-cge=2.0.9=hdfd78af_0
+  - nbformat=5.1.3=pyhd8ed1ab_0
+  - ncbi-vdb=3.1.1=h4ac6f70_2
+  - ncurses=6.5=he02047a_1
+  - numpy=1.19.5=py36hfc0c790_2
+  - openssl=1.1.1w=hd590300_0
+  - pcre2=10.40=hc3806b6_0
+  - perl=5.32.1=7_hd590300_perl5
+  - perl-archive-tar=2.40=pl5321hdfd78af_0
+  - perl-carp=1.50=pl5321hd8ed1ab_0
+  - perl-common-sense=3.75=pl5321hd8ed1ab_0
+  - perl-compress-raw-bzip2=2.201=pl5321h166bdaf_0
+  - perl-compress-raw-zlib=2.202=pl5321h166bdaf_0
+  - perl-encode=3.21=pl5321hd590300_0
+  - perl-exporter=5.74=pl5321hd8ed1ab_0
+  - perl-exporter-tiny=1.002002=pl5321hd8ed1ab_0
+  - perl-extutils-makemaker=7.70=pl5321hd8ed1ab_0
+  - perl-io-compress=2.201=pl5321hdbdd923_2
+  - perl-io-zlib=1.14=pl5321hdfd78af_0
+  - perl-json=4.10=pl5321hdfd78af_1
+  - perl-json-xs=4.03=pl5321h4ac6f70_3
+  - perl-list-moreutils=0.430=pl5321hdfd78af_0
+  - perl-list-moreutils-xs=0.430=pl5321h031d066_2
+  - perl-parent=0.241=pl5321hd8ed1ab_0
+  - perl-pathtools=3.75=pl5321h166bdaf_0
+  - perl-scalar-list-utils=1.63=pl5321h166bdaf_0
+  - perl-storable=3.15=pl5321hb9d3cd8_0
+  - perl-types-serialiser=1.01=pl5321hdfd78af_0
+  - pip=21.3.1=pyhd8ed1ab_0
+  - psutil=5.8.0=py36h8f6f2f9_1
+  - pulp=2.5.1=py36h5fab9bb_0
+  - pycparser=2.21=pyhd8ed1ab_0
+  - pyopenssl=22.0.0=pyhd8ed1ab_1
+  - pyparsing=3.1.4=pyhd8ed1ab_0
+  - pyrsistent=0.17.3=py36h8f6f2f9_2
+  - pysocks=1.7.1=py36h5fab9bb_3
+  - python=3.6.15=hb7a2778_0_cpython
+  - python_abi=3.6=2_cp36m
+  - ratelimiter=1.2.0=pyhd8ed1ab_1003
+  - readline=8.2=h8228510_1
+  - requests=2.28.1=pyhd8ed1ab_0
+  - rpsbproc=0.5.0=h6a68c12_0
+  - setuptools=58.0.4=py36h5fab9bb_2
+  - six=1.16.0=pyh6c4a22f_0
+  - smmap=3.0.5=pyh44b312d_0
+  - snakemake-minimal=5.31.1=py_1
+  - sqlite=3.46.0=h6d4b2fc_0
+  - tabulate=0.7.7=py36_0
+  - tk=8.6.13=noxft_h4845f30_101
+  - toposort=1.7=pyhd8ed1ab_0
+  - traitlets=4.3.3=pyhd8ed1ab_2
+  - typing_extensions=4.1.1=pyha770c72_0
+  - urllib3=1.26.15=pyhd8ed1ab_0
+  - wget=1.20.3=ha56f1ee_1
+  - wheel=0.37.1=pyhd8ed1ab_0
+  - wrapt=1.13.1=py36h8f6f2f9_0
+  - xz=5.2.6=h166bdaf_0
+  - yaml=0.2.5=h7f98852_2
+  - zipp=3.6.0=pyhd8ed1ab_0
+  - zlib=1.2.13=h4ab18f5_6
+  - pip:
+      - argh==0.27.2
+      - bifrostlib==2.1.16
+      - coverage==6.2
+      - dnspython==2.2.1
+      - gprof2dot==2022.7.29
+      - iniconfig==1.1.1
+      - jsmin==3.0.1
+      - jsonpatch==1.32
+      - jsonpointer==2.3
+      - jsonschema==3.2.0
+      - libmagic==1.0
+      - packaging==21.3
+      - pandas==1.1.5
+      - pluggy==1.0.0
+      - py==1.11.0
+      - pymongo==4.1.1
+      - pytest==7.0.1
+      - pytest-cov==4.0.0
+      - pytest-profiling==1.7.0
+      - python-dateutil==2.9.0.post0
+      - python-magic==0.4.27
+      - pytz==2024.2
+      - pyyaml==6.0.1
+      - tomli==1.2.3
+      - warlock==1.3.3
+      - watchdog==2.3.1
+prefix: /home/projects/fvst_ssi_dtu/apps/sofi_bifrost_dev/conda/envs/bifrost_dev_cge_mlst_v2.2.10
