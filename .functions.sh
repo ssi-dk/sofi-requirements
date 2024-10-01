@@ -19,10 +19,11 @@ checkout () {
 copy_custom_content () {
   component=$1
   component_dir=../components/bifrost_$component
-  if [ -e ${component}.frozen.txt ]; then
-    cp ${component}.frozen.yml $component_dir/explicit.txt;
+  if [ -e ${component}.frozen.yml ]; then
+    cp ${component}.frozen.yml $component_dir/environment.yml;
+  else
+    cp ${component}.yml $component_dir/environment.yml
   fi
-  cp ${component}.yml $component_dir/environment.yml
   cp install.sh $component_dir/
   if [ -e ${component}_ci.sh ]; then
     cp ${component}_ci.sh $component_dir/custom_install.sh
@@ -82,7 +83,7 @@ freeze_component () {
   get_component_name name
   component_name=("bifrost_"$name)
   popd
-  conda list --explicit > ${name}.frozen.txt
+  conda env export > ${name}.frozen.yml
   conda deactivate  
 }  
 
