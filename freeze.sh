@@ -1,7 +1,8 @@
 #!/bin/bash
 
-source .functions.sh
+set -euo pipefail
 
+source .functions.sh
 
 arg1=${1:-}
 if [[ -z "$arg1" ]]
@@ -12,8 +13,6 @@ else
   components="$@"
 fi
 
-branch="test"
-
 ## Enable conda
 module load tools $CONDA_VERSION
 eval "$(conda shell.bash hook)"
@@ -21,7 +20,5 @@ eval "$(conda shell.bash hook)"
 
 for component in $components
 do
-  checkout $component $branch;
-  copy_custom_content $component;
-  install_component $component;
+  freeze_component $component;
 done
