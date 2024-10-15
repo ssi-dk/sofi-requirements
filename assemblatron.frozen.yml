@@ -179,3 +179,4 @@ dependencies:
       - tzdata==2024.1
       - warlock==2.0.1
       - watchdog==4.0.2
+      - -e .

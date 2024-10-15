@@ -9,3 +9,4 @@ seqsero
 ssi_stamper
 whats_my_species
 salmonella_subspecies_dtartrate
+run_launcher

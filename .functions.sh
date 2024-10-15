@@ -84,6 +84,7 @@ freeze_component () {
   component_name=("bifrost_"$name)
   popd
   conda env export | grep -vP '^prefix:' > ${name}.frozen.yml
+  echo "      - -e ." >> ${name}.frozen.yml
   conda deactivate  
 }  
 
