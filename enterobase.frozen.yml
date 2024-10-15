@@ -178,4 +178,3 @@ dependencies:
       - tzdata==2024.1
       - warlock==2.0.1
       - watchdog==5.0.2
-prefix: /home/projects/fvst_ssi_dtu/apps/sofi_bifrost_dev/conda/envs/bifrost_dev_enterobase_v1.1.8

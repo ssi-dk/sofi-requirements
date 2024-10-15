@@ -14,5 +14,6 @@ dependencies:
   - watchdog
   - wget
   - pip
+  - pip:
     - bifrostlib
     - -e .

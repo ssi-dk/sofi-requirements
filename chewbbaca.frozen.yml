@@ -227,4 +227,3 @@ dependencies:
       - python-magic==0.4.27
       - warlock==1.3.3
       - watchdog==5.0.2
-prefix: /home/projects/fvst_ssi_dtu/apps/sofi_bifrost_dev/conda/envs/bifrost_dev_chewbbaca_v1.0.6
