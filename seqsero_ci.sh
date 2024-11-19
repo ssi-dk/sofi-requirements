@@ -5,11 +5,13 @@
 
 ENV_NAME=$1
 
+STAGE="${BIFROST_STAGE:+${BIFROST_STAGE}_}"
+
 SEQSERO_LINK=https://github.com/denglab/SeqSero/archive/v1.0.1.tar.gz
 SEQSERO_ARCHIVE_NAME=v1.0.1.tar.gz
 SEQSERO_FOLDER=SeqSero-1.0.1
 SEQSERO_ENV_FILE=envs/SeqSero.yaml
-SEQSERO_ENV_NAME=bifrost_SeqSero
+SEQSERO_ENV_NAME=bifrost_${STAGE}SeqSero
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR # avoiding small edge case where bashrc sourcing changes your directory
