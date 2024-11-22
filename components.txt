@@ -10,3 +10,6 @@ ssi_stamper
 whats_my_species
 salmonella_subspecies_dtartrate
 run_launcher
+sp_ecoli
+sp_cdiff
+amrfinderplus
