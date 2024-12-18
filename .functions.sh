@@ -65,7 +65,8 @@ install_component () {
   set -e
   get_environment_name env_name
   conda activate $env_name
-  local CONFIG_YAML_PATH=$(find . -name "config.yaml")
+  pkgdir=bifrost_$component
+  local CONFIG_YAML_PATH=$(find $pkgdir -name "config.yaml")
   get_component_name name
   component_name=("bifrost_"$name)
   python -m $component_name -h
@@ -79,7 +80,8 @@ freeze_component () {
   pushd $component_dir
   get_environment_name env_name
   conda activate $env_name
-  local CONFIG_YAML_PATH=$(find . -name "config.yaml")
+  pkgdir=bifrost_$component
+  local CONFIG_YAML_PATH=$(find pkgdir -name "config.yaml")
   get_component_name name
   component_name=("bifrost_"$name)
   popd
