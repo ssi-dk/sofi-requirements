@@ -33,9 +33,7 @@ copy_custom_content () {
 get_component_name() {
   echo "get_component_name yaml ${CONFIG_YAML_PATH}"
   local __resvar=$1
-  ls -l $CONFIG_YAML_PATH
   local COMPONENT_NAME=$(grep "display_name:.*." $CONFIG_YAML_PATH | tr " " "\n" | grep -v "display_name:")
-  echo "after local comopnent name $COMPONENT_NAME"
   eval $__resvar="'$COMPONENT_NAME'"
 }
 
@@ -47,24 +45,16 @@ get_component_version() {
   eval $__resvar="'$COMPONENT_VERSION'"
 }
 
+get_config_yaml() {
+  local __resvar=$1
+  eval $__resvar="'bifrost_${component}/config.yaml'"
+}
+
 get_environment_name() {
   local __resvar=$1
   local SCRIPT_DIR=${2:-.}
-  echo "script dir ${SCRIPT_DIR}"
-  echo "get_environment_name component_dir ${component_dir}"
-  local tmp_dir=$(echo "${component_dir}/bifrost_${component}")
-  echo "tmp dor ${tmp_dir}"
-
-  echo "Contents of ${component_dir}:"
-  ls -l ..
-   
-  local SCRIPT_DIR_2=$(realpath "${2:-.}")
-
-  echo "script dir: $SCRIPT_DIR_2"
-
-  #local CONFIG_YAML_PATH=$(find $SCRIPT_DIR -name "config.yaml") #"${component_dir}/bifrost_${component}/config.yaml" #$(find $SCRIPT_DIR -name "config.yaml")
-  #local CONFIG_YAML_PATH="${component_dir}/bifrost_${component}/config.yaml"
-  local CONFIG_YAML_PATH=$(realpath "${SCRIPT_DIR_2}/bifrost_${component}/config.yaml")
+  get_config_yaml config_yaml
+  local CONFIG_YAML_PATH=$config_yaml
   
   echo "get_environment_name config_yaml $CONFIG_YAML_PATH"
 
@@ -97,8 +87,8 @@ install_component () {
   set -e
   get_environment_name env_name
   conda activate $env_name
-  pkgdir=bifrost_$component
-  local CONFIG_YAML_PATH=$(find $pkgdir -name "config.yaml")
+  get_config_yaml config_yaml
+  local CONFIG_YAML_PATH=$config_yaml
   get_component_name name
   component_name=("bifrost_"$name)
   python -m $component_name -h
@@ -120,16 +110,12 @@ freeze_component () {
   get_environment_name env_name
 
   conda activate $env_name
-  #pkgdir=bifrost_$component
-  #local CONFIG_YAML_PATH="$component_dir/$pkgdir/config.yaml"
-  local SCRIPT_DIR_2=$(realpath "${2:-.}")
-  echo "script dir: $SCRIPT_DIR_2"
-  local CONFIG_YAML_PATH=$(realpath "${SCRIPT_DIR_2}/bifrost_${component}/config.yaml")
-  echo " config path ${CONFIG_YAML_PATH}"
+  get_config_yaml config_yaml
+  local CONFIG_YAML_PATH=$config_yaml
   get_component_name name
   component_name=("bifrost_"$name)
   popd
-  conda env export | grep -vP '^prefix:' > ${name}.frozen.yml
+  conda env export | grep -vP '(^prefix:)|(serum-readfilter)' > ${name}.frozen.yml
   echo "      - -e ." >> ${name}.frozen.yml
   conda deactivate  
 }  
