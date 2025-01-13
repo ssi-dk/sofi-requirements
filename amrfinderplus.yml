@@ -6,6 +6,7 @@ dependencies:
   - snakemake-minimal==8.10.6
   - ncbi-amrfinderplus
   - python>=3.11
+  - pyopenssl>=24.3.0
   - git
   - pip
   - pip:

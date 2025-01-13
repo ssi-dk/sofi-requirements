@@ -1,4 +1,4 @@
-name: bifrost_dev_sp_cdiff_v0.0.1
+name: bifrost_test_sp_cdiff_v0.0.1
 channels:
   - conda-forge
   - bioconda
@@ -253,7 +253,6 @@ dependencies:
       - pymongo==4.10.1
       - python-magic==0.4.27
       - pytz==2024.2
-      - serum-readfilter==1.0
       - tzdata==2024.2
       - warlock==2.0.1
       - -e .
