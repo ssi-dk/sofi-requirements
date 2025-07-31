@@ -8,7 +8,7 @@
 ENV_NAME=$1
 
 GIT_REPO_PATH=https://git@bitbucket.org/genomicepidemiology/mlst_db.git
-GIT_CHECKOUT_HASH=5e385d4 # Updated on 25/05/22
+GIT_CHECKOUT_HASH=efcda45 # Updated on 16/06/25
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR # avoiding small edge case where bashrc sourcing changes your directory
