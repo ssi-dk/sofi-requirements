@@ -149,7 +149,7 @@ dependencies:
   - zstd=1.5.6=ha6fb4c9_0
   - pip:
       - argh==0.31.3
-      - bifrostlib==2.1.16
+      - bifrostlib==2.1.18
       - coverage==7.6.1
       - dnspython==2.6.1
       - gprof2dot==2024.6.6

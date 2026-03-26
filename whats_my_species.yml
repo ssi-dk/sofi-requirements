@@ -3,9 +3,9 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - snakemake-minimal==8.10.6
-  - kraken==1.1.1
-  - bracken==1.0.0
+  - snakemake-minimal
+  - kraken2>=2.17.1
+  - bracken>=3.0.1
   - tar
   - pip
   - pip:

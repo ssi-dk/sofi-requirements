@@ -3,8 +3,8 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - snakemake-minimal==8.10.6
-  - bbmap==38.58
+  - snakemake-minimal
+  - fastp>=1.1.0
   - pip
   - pip:
     #- jsonschema<4

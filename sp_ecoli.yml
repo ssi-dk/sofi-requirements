@@ -3,9 +3,9 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - snakemake-minimal==8.4.11
+  - snakemake-minimal
   - kma 
-  - python=3.11
+  - python>=3.13
   - git
   - pip
   - pip:
@@ -15,6 +15,6 @@ dependencies:
       - pytest
       - requests 
       - python-dotenv
-      - bifrostlib
+      - bifrostlib>=2.1.20
       - pymongo
       - -e .

@@ -3,9 +3,9 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - snakemake-minimal==8.10.6
+  - snakemake-minimal
   - ncbi-amrfinderplus
-  - python>=3.11
+  - python>=3.13
   - pyopenssl>=24.3.0
   - git
   - pip
@@ -17,5 +17,5 @@ dependencies:
       - pyyaml
       - argh
       - watchdog
-      - bifrostlib
+      - bifrostlib>=2.1.20
       - -e .

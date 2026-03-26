@@ -5,7 +5,6 @@ cge_resfinder
 chewbbaca
 enterobase
 min_read_check
-seqsero
 ssi_stamper
 whats_my_species
 salmonella_subspecies_dtartrate
@@ -13,3 +12,4 @@ run_launcher
 sp_ecoli
 sp_cdiff
 amrfinderplus
+sistr

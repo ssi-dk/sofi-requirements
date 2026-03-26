@@ -7,7 +7,7 @@
 
 ENV_NAME=$1
 
-GIT_REPO_PATH=https://git@bitbucket.org/genomicepidemiology/mlst_db.git
+GIT_REPO_PATH=git@bitbucket.org:genomicepidemiology/mlst_db.git
 GIT_CHECKOUT_HASH=efcda45 # Updated on 16/06/25
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )

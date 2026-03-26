@@ -4,6 +4,7 @@ channels:
   - bioconda
   - conda-forge
 dependencies:
+  - python>=3.13
   - pytest
   - pytest-cov
   - pytest-profiling
@@ -15,5 +16,5 @@ dependencies:
   - wget
   - pip
   - pip:
-    - bifrostlib
+    - bifrostlib>=2.1.20
     - -e .
