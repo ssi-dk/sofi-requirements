@@ -115,7 +115,7 @@ freeze_component () {
   get_component_name name
   component_name=("bifrost_"$name)
   popd
-  conda env export | grep -vP '(^prefix:)|(serum-readfilter)' > ${name}.frozen.yml
+  conda env export | grep -vP '(^prefix:)|(serum-readfilter)|(bifrost-)' > ${name}.frozen.yml
   echo "      - -e ." >> ${name}.frozen.yml
   conda deactivate  
 }  
