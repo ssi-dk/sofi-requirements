@@ -1,10 +1,11 @@
-channels:
+lchannels:
   - conda-forge
   - bioconda
 dependencies:
   - snakemake-minimal
-  - seqsero2
+  - python>=3.13
   - pip
   - pip:
     - pyyaml
+    - bifrostlib>=2.1.20
     - -e .

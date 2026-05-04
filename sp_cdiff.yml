@@ -3,6 +3,7 @@ channels:
   - bioconda
   - defaults
 dependencies:
+  - setuptools<82
   - snakemake-minimal
   - python>=3.12
   - picard==3.1.1
