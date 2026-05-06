@@ -107,7 +107,6 @@ dependencies:
   - zstd=1.5.7=hb78ec9c_6
   - pip:
       - argh==0.31.3
-      - bifrost-assembly-qc==2.2.23
       - bifrostlib==2.1.20
       - click==8.3.1
       - coloredlogs==15.0.1

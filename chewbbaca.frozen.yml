@@ -205,7 +205,6 @@ dependencies:
   - zstd=1.5.7=hb8e6e7a_2
   - pip:
       - argh==0.31.3
-      - bifrost-chewbbaca==2.1.1
       - bifrostlib==2.1.18
       - coverage==7.10.5
       - dnspython==2.7.0
